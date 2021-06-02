@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <style>
+      body {
+  background-color: #333;
+}
+
+/* This is the circular image. */
+body {
+  
+	
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+
+}
+
+/* This is the circular image. */
+.bio-photo {
+  border-radius: 50%;
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+/* This is the outer div. Top white box. */
+.box {
+  /* This needs to be inline-block display. */
+  display: inline-block;
+  
+  /* Width and height of the box */
+  width: 900px;
+  height: 200px;
+  
+  /* Position of the box on the page. */
+  margin: 10px;
+  
+  /* Background color of the top box */
+  background-color: #fefefe;
+}
+
+/* This is for the span where the image or text is placed. */
+.box span {
+  /* This needs to be block display. */
+  display: block;
+  
+  /* Size of the circle  */
+  width: 150px;
+  height: 150px;
+  
+    /* This changes the square into a circle */
+  border-radius: 100%;
+   
+  /* Necessary for the placement of the circle  */
+  margin-top: 125px;
+  margin-left: 375px;
+  
+  /*  The border around the circle  */
+  /*  border: 2px solid black; */
+  
+  /* This would create a nice white semi-circle under the photo.   */
+  /* border: 20px solid white; */
+  
+    /* This would create a nice grayt semi-circle under the photo.   */
+  border: 20px solid #ccc;
+  
+  /*  Relevant if using text.  */
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 150px;
+  background-color: #81D4FA;
+  z-index: 20;
+}
+
+/* This is the inner div. Bottom gray box. */
+.box2 {
+  /* This needs to be position relative.*/
+  position: relative;  
+  
+  /* z-index needs to be set to a negative number, below the circular image.*/
+  z-index: -10;
+  
+  display: inline-block;
+  width: 900px;
+  height: 300px;
+  
+  /* This number may need to be adjusted if any changes are made
+  to border thickness. */
+  margin-top: -119px;
+  background-color: #ccc;
+  vertical-align: top;
+}
+    </style>
+
+  </head>
+  <body>
+
+    <div class="box">
+      <span><img src="images/image-victor.jpg" class="bio-photo text-center"></span>
+      <div class="box2"></div>
+    </div>    
+  </body>
+</html>
